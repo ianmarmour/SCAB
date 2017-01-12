@@ -21,3 +21,23 @@ Using git use the following command:
 
 `git clone git://github.com/ianmarmour/SCAB/SCAB.git`
 
+
+## Sample Syntax
+
+### Command Line Usage
+
+`ruby scab.rb -r 192.0.0.0/8 -u john.doe -p janedoe2014! -s 151.1.1.2 -a 32 -l 17`
+
+-r | --range = The IP ranges to scan seperated by comma's
+
+-u | --user = The Security Center user (Must have Security Manager rights on the server)
+
+-p | --password = The Security Center user's password
+
+-s | --server = The Security Center IP Address or Hostname
+
+-a | --assetlist = The Security Center Asset Lists ID
+
+-c | --config = The configuration file location/name
+
+-l | --launch = The scan ID that you wish to launch after asset list compilation has been completed. (This is not required)
