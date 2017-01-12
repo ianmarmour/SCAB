@@ -26,6 +26,8 @@ Using git use the following command:
 
 ### Command Line Usage
 
+Manually Defined Configuration Settings
+
 `ruby scab.rb -r 192.0.0.0/8 -u john.doe -p janedoe2014! -s 151.1.1.2 -a 32 -l 17`
 
 -r | --range = The IP ranges to scan seperated by comma's  
@@ -34,4 +36,22 @@ Using git use the following command:
 -s | --server = The Security Center IP Address or Hostname  
 -a | --assetlist = The Security Center Asset Lists ID  
 -c | --config = The configuration file location/name  
--l | --launch = The scan ID that you wish to launch after asset list compilation has been completed. (This is not required)  
+-l | --launch = The scan ID that you wish to launch after asset list compilation has been completed. (This is not required) 
+
+Configuration file defined settings
+
+`ruby scab.rb -c /home/username/settings.conf`
+
+## Configuration Syntax
+
+range:  
+&nbsp;&nbsp;192.0.0.0/8  
+user:  
+&nbsp;&nbsp;name: john.doe  
+&nbsp;&nbsp;password: janedoe2014!  
+server:  
+&nbsp;&nbsp;ip: 151.1.1.2  
+assetlist:  
+&nbsp;&nbsp;id: 77  
+scan:  
+&nbsp;&nbsp;id: 17  
