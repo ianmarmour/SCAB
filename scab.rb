@@ -8,7 +8,7 @@ Dir['/root/SCAB/*'].each do |file_name|
   end
 end
 
-%x(masscan 149.174.97.0/24 -p0,80 --ping --rate 10000 -oG #{filename})
+%x(masscan *.*.*.*/24 -p0,80 --ping --rate 10000 -oG #{filename})
 
 File.open("#{filename}", "r").each_line do |line|
     data = line.match(/\d+\.\d+\.\d+.\d+/)
